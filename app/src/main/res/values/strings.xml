@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+
+
+    <string-array name="tasksLevelOne">
+        <item>Go for a Jog</item>
+        <item>Have Breakfast</item>
+        <item>Take your vitamins</item>
+        <item>Water your plants</item>
+        <item>Make dinner</item>
+        <item>Go to sleep</item>
+    </string-array>
+
+    <string-array name="tasksLevelTwo">
+        <item>Go for a Run</item>
+        <item>Have a Healthy Breakfast</item>
+        <item>Have a protein shake</item>
+        <item>Feed the fish</item>
+        <item>Make a healthy dinner</item>
+        <item>Sleep at a normal time</item>
+    </string-array>
+
+    <string-array name="tasksLevelThree">
+        <item>Run a marathon</item>
+        <item>Eat healthy for a week</item>
+        <item>Go to the gym</item>
+        <item>Feed the world</item>
+        <item>Design a health app</item>
+        <item>Sleep forever</item>
+    </string-array>
+</resources>
