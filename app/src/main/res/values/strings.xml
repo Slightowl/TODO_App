@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">ToDoApp</string>
+    <string name="Next">Next</string>
+    <string name="Prev">Prev</string>
+    <string name="todo_list_view">Todo list!</string>
+    <string name="textViewToDoDetail">TextViewTodoDetail</string>
+    <string name="todo_complete">Todo Complete?</string>
+    <string name="textViewIntentData">Data from intent</string>
+    <string name="detail">Detail</string>
+    <string name="buttonTodoDetailText">detail</string>
+    <string name="request_code_mismatch">requestCode in intent does not match the parent requestCode</string>
+    <string name="back_button_pressed">Back button pressed</string>
+    <string name="db_drop">DROP TABLE IF EXISTS</string>
 
 
     <string-array name="tasksLevelOne">
