@@ -5,13 +5,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.todoapp.adapter.ProfileRecyclerAdapter;
 import com.example.todoapp.data.DatabaseHandler;
 import com.example.todoapp.model.UserAccounts;
 
@@ -20,16 +24,10 @@ import java.util.List;
 
 public class ProfileFragment extends Fragment {
 
-    private ListView listView;
-    private ArrayList<String> userArrayList;
+    private RecyclerView recyclerView;
+    private ProfileRecyclerAdapter recyclerViewAdapter;
+    private ArrayList<UserAccounts> userArrayList;
     private ArrayAdapter arrayAdapter;
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        listView = listView.findViewById(R.id.profileListView);
-
-    }
 
     @Nullable
     @Override
@@ -40,31 +38,28 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.profile_manager, container, false);
 
         /* Create List of user accounts */
-        listView = view.findViewById(R.id.profileListView);
-        userArrayList = new ArrayList<>();
+        recyclerView = view.findViewById(R.id.profile_recycler_view);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        userArrayList = new ArrayList<>();
         DatabaseHandler db = new DatabaseHandler(getActivity());
 
-        //DatabaseHandler db = new DatabaseHandler(ProfileFragment.this);
-
-        /*  TEST ACCOUNTS  */
-        /*                 */
-
-        List<UserAccounts> userAccountsList = db.getAllUserAccounts();
-
+        final List<UserAccounts> userAccountsList = db.getAllUserAccounts();
         for (UserAccounts userAccounts: userAccountsList) {
             Log.d("MainActivity", "onCreate " + userAccounts.getUserName());
-            userArrayList.add(userAccounts.getUserName());
+            userArrayList.add(userAccounts);
         }
 
-        /* create array adapter */
+        /* configure recycler adapter */
+        recyclerViewAdapter = new ProfileRecyclerAdapter(getActivity(), userArrayList);
+        recyclerView.setAdapter(recyclerViewAdapter);
 
-        arrayAdapter = new ArrayAdapter<>(
-                getActivity(), android.R.layout.simple_list_item_1, userArrayList
-        );
 
-        /* implement with listview */
-        listView.setAdapter(arrayAdapter);
+
+
+
+
 
         return view;
     }

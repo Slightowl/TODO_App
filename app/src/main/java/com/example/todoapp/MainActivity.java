@@ -20,7 +20,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                  new HomeFragment()).commit();
     }
-
 
     /*
     Create listener for Navigation bar which
