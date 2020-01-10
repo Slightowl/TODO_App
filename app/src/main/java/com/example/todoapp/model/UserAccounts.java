@@ -6,6 +6,11 @@ public class UserAccounts {
     private String userName;
     private String password;
 
+    public UserAccounts(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
+
 
     /* may want to create objects */
     public UserAccounts() {

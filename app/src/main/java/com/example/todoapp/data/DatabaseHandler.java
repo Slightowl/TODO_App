@@ -109,4 +109,43 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         return userAccountsList;
     }
+
+    /*
+    Update an account:
+    update(table_name, values, where id = n )
+     */
+    public int updateAccount(UserAccounts userAccounts) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(Util.KEY_USERNAME, userAccounts.getUserName());
+        values.put(Util.KEY_PASSWORD, userAccounts.getPassword());
+
+        /* update row */
+        return db.update(Util.TABLE_NAME, values, Util.KEY_ID + "=?",
+                new String[]{String.valueOf(userAccounts.getId())});
+    }
+
+    /* DELETE an account */
+    public void deleteUserAccount(UserAccounts userAccounts) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.delete(Util.TABLE_NAME, Util.KEY_ID + "=?",
+                new String[]{String.valueOf(userAccounts.getId())});
+
+        db.close();
+    }
+
+    /*
+    get user count
+    May use this for something
+     */
+    public int getCount() {
+        String countQuery = "SELECT * FROM " + Util.TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(countQuery, null);
+
+        return cursor.getCount();
+    }
 }

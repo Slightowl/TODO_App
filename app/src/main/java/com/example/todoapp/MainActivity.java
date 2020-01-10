@@ -7,11 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.todoapp.data.DatabaseHandler;
 import com.example.todoapp.model.UserAccounts;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,21 +25,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        DatabaseHandler db = new DatabaseHandler(MainActivity.this);
-
-        /*  TEST ACCOUNTS  */
-
-        UserAccounts JohnDoe = new UserAccounts();
-        JohnDoe.setUserName("JohnDoe");
-        JohnDoe.setPassword("password123");
-
-        // db.addUsername(JohnDoe);
-
-        List<UserAccounts> userAccountsList = db.getAllUserAccounts();
-        for (UserAccounts userAccounts: userAccountsList) {
-            Log.d("MainActivity", "onCreate " + userAccounts.getUserName());
-        }
 
         /*
         Reference navigation resource and pass in listener
