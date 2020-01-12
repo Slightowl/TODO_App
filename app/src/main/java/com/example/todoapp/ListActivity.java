@@ -35,7 +35,7 @@ public class ListActivity extends AppCompatActivity {
 
         taskList = new ArrayList<>();
 
-        // retrieve tasks from database
+        /* retrieve tasks from database */
         taskList = db.getAllTaskList();
 
         for (TaskList taskList : taskList) {
@@ -46,4 +46,6 @@ public class ListActivity extends AppCompatActivity {
         recyclerView.setAdapter(taskRecyclerAdapter);
         taskRecyclerAdapter.notifyDataSetChanged();
     }
+
+
 }

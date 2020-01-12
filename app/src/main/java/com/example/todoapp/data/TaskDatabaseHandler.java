@@ -97,7 +97,10 @@ public class TaskDatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(Util.TASK_TABLE_NAME,
-                new String[]{Util.KEY_TASK_ID, Util.KEY_TASK_DESCR, Util.KEY_DATE_NAME,},
+                new String[]{Util.KEY_TASK_ID,
+                             Util.KEY_TASK,
+                             Util.KEY_TASK_DESCR,
+                             Util.KEY_DATE_NAME },
                             null, null, null, null,
                             Util.KEY_DATE_NAME + " DESC");
 

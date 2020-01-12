@@ -9,6 +9,14 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+/*
+
+
+ */
+
+// Todo: fix task title output
+// Todo: fix home page
+
 public class MainActivity extends AppCompatActivity {
 
 

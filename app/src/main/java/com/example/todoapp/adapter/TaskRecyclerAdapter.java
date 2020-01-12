@@ -38,7 +38,7 @@ public class TaskRecyclerAdapter extends RecyclerView.Adapter<TaskRecyclerAdapte
         TaskList taskList = taskLists.get(position); // obj
 
         viewHolder.taskName.setText(taskList.getTaskName());
-        viewHolder.taskDescr.setText(taskList.getTaskDescription());
+        viewHolder.taskDescr.setText(taskList.getTaskDescription()); // Todo: bug here?
         viewHolder.timeStamp.setText(taskList.getTimeStamp());
 
     }

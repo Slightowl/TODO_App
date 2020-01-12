@@ -50,8 +50,6 @@ public class TaskManagerFragment extends Fragment {
             + taskList.getTimeStamp());
         }
 
-
-
         /* Do something with this */
         FloatingActionButton fab = view.findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +117,5 @@ public class TaskManagerFragment extends Fragment {
         builder.setView(view);
         dialog = builder.create(); // create dialogue object
         dialog.show();
-
-
     }
 }
