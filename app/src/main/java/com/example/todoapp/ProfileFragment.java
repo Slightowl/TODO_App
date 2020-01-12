@@ -5,9 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.todoapp.adapter.ProfileRecyclerAdapter;
-import com.example.todoapp.data.DatabaseHandler;
+import com.example.todoapp.data.UserDatabaseHandler;
 import com.example.todoapp.model.UserAccounts;
 
 import java.util.ArrayList;
@@ -43,7 +41,7 @@ public class ProfileFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         userArrayList = new ArrayList<>();
-        DatabaseHandler db = new DatabaseHandler(getActivity());
+        UserDatabaseHandler db = new UserDatabaseHandler(getActivity());
 
         final List<UserAccounts> userAccountsList = db.getAllUserAccounts();
         for (UserAccounts userAccounts: userAccountsList) {

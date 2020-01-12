@@ -16,10 +16,10 @@ import com.example.todoapp.util.Util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseHandler extends SQLiteOpenHelper {
+public class UserDatabaseHandler extends SQLiteOpenHelper {
 
     /* pass in DB name */
-    public DatabaseHandler(Context context) {
+    public UserDatabaseHandler(Context context) {
         super(context, Util.DATABASE_NAME, null, Util.DATABASE_VERSION);
     }
 

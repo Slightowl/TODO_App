@@ -3,9 +3,16 @@
     <string name="Next">Next</string>
     <string name="Prev">Prev</string>
     <string name="todo_list_view">Todo list!</string>
+    <string name="add_item">Add item</string>
     <string name="username">UserName goes here</string>
     <string name="password">Password goes here</string>
     <string name="db_drop">DROP TABLE IF EXISTS</string>
+    <string name="enter_item">Enter Task!</string>
+    <string name="task_description">Add a short description</string>
+    <string name="add_task">Add your task</string>
+    <string name="save">SAVE</string>
+    <string name="task_name">Task title</string>
+    <string name="timestamp">Date</string>
 
 
     <string-array name="tasksLevelOne">

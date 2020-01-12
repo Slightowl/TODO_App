@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="322dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="322dp"
+            android:layout_height="match_parent"
+            android:background="#6BC9FF"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/popup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/enter_item"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/task_item"
+                android:layout_width="289dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/popup_title"
+                android:layout_marginTop="2dp"
+                android:hint="@string/add_task"
+                android:backgroundTint="#D5E9F7" />
+
+            <EditText
+                android:id="@+id/task_description"
+                android:layout_width="289dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/task_item"
+                android:layout_marginTop="2dp"
+                android:hint="@string/task_description"
+                android:backgroundTint="#D5E9F7" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_description"
+                android:text="@string/save"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
