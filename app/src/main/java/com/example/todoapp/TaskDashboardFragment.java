@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +32,10 @@ public class TaskDashboardFragment extends Fragment {
     private TaskDashRecyclerAdapter recyclerAdapter;
     private ArrayList<TaskList> taskList;
     private ArrayAdapter arrayAdapter;
+    private Button completeTask;
+    private ProgressBar progressBar;
+
+
 
     @Nullable
     @Override
@@ -39,7 +45,8 @@ public class TaskDashboardFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.task_dashboard, container, false);
 
-        recyclerView = view.findViewById(R.id.dashboard_recyclerview);
+        // Todo: implement recyclerView
+  /*      recyclerView = view.findViewById(R.id.dashboard_recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -47,8 +54,28 @@ public class TaskDashboardFragment extends Fragment {
         TaskDatabaseHandler db = new TaskDatabaseHandler(getActivity());
 
         recyclerAdapter = new TaskDashRecyclerAdapter(getActivity(), taskList);
-        recyclerView.setAdapter(recyclerAdapter);
+        recyclerView.setAdapter(recyclerAdapter);*/
 
+        completeTask = view.findViewById(R.id.dashboard_complete_task);
+        progressBar = view.findViewById(R.id.progressBar);
+
+        progressBar.setMax(100);
+        progressBar.setProgress(0);
+
+
+
+        completeTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                int count = 5;
+
+                if(count < 100) {
+                    progressBar.setProgress(count++);
+                }
+
+            }
+        });
         return view;
     }
 }
