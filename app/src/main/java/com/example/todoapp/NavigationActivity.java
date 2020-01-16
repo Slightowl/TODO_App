@@ -21,7 +21,7 @@ user to create, update and delete tasks.
 // Todo: ListActivity back button has bug which can throw you off app (not crash)
 // Todo: fix home page
 
-public class MainActivity extends AppCompatActivity {
+public class NavigationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

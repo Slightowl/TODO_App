@@ -45,7 +45,7 @@ public class ProfileFragment extends Fragment {
 
         final List<UserAccounts> userAccountsList = db.getAllUserAccounts();
         for (UserAccounts userAccounts: userAccountsList) {
-            Log.d("MainActivity", "onCreate " + userAccounts.getUserName());
+            Log.d("NavigationActivity", "onCreate " + userAccounts.getUserName());
             userArrayList.add(userAccounts);
         }
 

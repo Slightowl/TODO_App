@@ -15,32 +15,29 @@
     <string name="timestamp">Date</string>
     <string name="edit_item">Edit Item</string>
     <string name="update_text">Update</string>
+    <string name="display_line">The archer sees the mark upon the path of the infinite</string>
+    <string name="camera">Say cheese!</string>
 
+    // Poem strings - Khalil Gibran
 
-    <string-array name="tasksLevelOne">
-        <item>Go for a Jog</item>
-        <item>Have Breakfast</item>
-        <item>Take your vitamins</item>
-        <item>Water your plants</item>
-        <item>Make dinner</item>
-        <item>Go to sleep</item>
+    <string-array name="khalil_poem">
+        <item>Your children are not your children</item>
+        <item>They are the sons and daughters of life´s longing for itself</item>
+        <item>They come through you but not from you</item>
+        <item>And though they are with you, they belong not to you</item>
+        <item>You may give them your love but not your thoughts</item>
+        <item>For they have their own thoughts</item>
+        <item>You may house their bodies but not their souls</item>
+        <item>For their souls dwell in the house of tomorrow</item>
+        <item>Which you can not visit, not even in your dreams</item>
+        <item>You may strive to be like them, but seek not to make them like you</item>
+        <item>For life goes not backwards nor tarries with yesterday</item>
+        <item>You are the bows from which your children as living arrows are sent forth</item>
+        <item>The archer sees the mark upon the path of the infinite</item>
+        <item>And He bends you with His might that His arrows may go swift and far</item>
+        <item>Let your bending in the archers hands be for happiness</item>
+        <item>For even as He loves the arrow that flies</item>
+        <item>So He loves the bow that is stable</item>
     </string-array>
 
-    <string-array name="tasksLevelTwo">
-        <item>Go for a Run</item>
-        <item>Have a Healthy Breakfast</item>
-        <item>Have a protein shake</item>
-        <item>Feed the fish</item>
-        <item>Make a healthy dinner</item>
-        <item>Sleep at a normal time</item>
-    </string-array>
-
-    <string-array name="tasksLevelThree">
-        <item>Run a marathon</item>
-        <item>Eat healthy for a week</item>
-        <item>Go to the gym</item>
-        <item>Feed the world</item>
-        <item>Design a health app</item>
-        <item>Sleep forever</item>
-    </string-array>
 </resources>

@@ -19,7 +19,6 @@ import com.example.todoapp.model.TaskList;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.io.CharArrayWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,7 +85,8 @@ public class ListActivity extends AppCompatActivity {
     }
 
     private void navigateBack() {
-        finish(); // Todo : throws you off app needs changing
+        startActivity(new Intent(ListActivity.this, NavigationActivity.class));
+        finish();
     }
 
     private void createPopDialog() {
