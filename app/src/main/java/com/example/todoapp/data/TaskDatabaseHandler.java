@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import androidx.lifecycle.LiveData;
+
 import com.example.todoapp.R;
 import com.example.todoapp.model.TaskList;
 import com.example.todoapp.model.UserAccounts;
@@ -42,7 +45,6 @@ public class TaskDatabaseHandler extends SQLiteOpenHelper {
 
         /* recreate table */
         onCreate(db);
-
     }
 
     /* CREATE data */
@@ -87,6 +89,13 @@ public class TaskDatabaseHandler extends SQLiteOpenHelper {
         taskList.setTimeStamp(formattedDate);
 
         return taskList;
+    }
+
+    // Todo: maybe implement this
+
+    public LiveData<List<TaskList>> getTaskies() {
+        return getTaskies();
+
     }
 
     /* return ALL tasks */
@@ -148,11 +157,12 @@ public class TaskDatabaseHandler extends SQLiteOpenHelper {
     }
 
     /* DELETE an account */
-    public void deleteTask(TaskList taskList) {
+    public void deleteTask(int taskList) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         db.delete(Util.TASK_TABLE_NAME, Util.KEY_TASK_ID + "=?",
-                new String[]{String.valueOf(taskList.getId())});
+                new String[]{String.valueOf(taskList)});
+
 
         db.close();
     }

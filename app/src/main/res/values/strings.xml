@@ -13,6 +13,8 @@
     <string name="save">SAVE</string>
     <string name="task_name">Task title</string>
     <string name="timestamp">Date</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="update_text">Update</string>
 
 
     <string-array name="tasksLevelOne">

@@ -27,7 +27,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/task_item"
+                android:id="@+id/task_manager_item"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
                 android:layout_below="@+id/popup_title"
@@ -36,10 +36,10 @@
                 android:backgroundTint="#D5E9F7" />
 
             <EditText
-                android:id="@+id/task_description"
+                android:id="@+id/task_manager_description"
                 android:layout_width="289dp"
                 android:layout_height="40dp"
-                android:layout_below="@+id/task_item"
+                android:layout_below="@+id/task_manager_item"
                 android:layout_marginTop="2dp"
                 android:hint="@string/task_description"
                 android:backgroundTint="#D5E9F7" />
@@ -48,7 +48,7 @@
                 android:id="@+id/save_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/task_description"
+                android:layout_below="@id/task_manager_description"
                 android:text="@string/save"
                 android:textStyle="bold" />
 

@@ -53,12 +53,6 @@ public class ProfileFragment extends Fragment {
         recyclerViewAdapter = new ProfileRecyclerAdapter(getActivity(), userArrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
 
-
-
-
-
-
-
         return view;
     }
 }

@@ -10,5 +10,23 @@
         android:textSize="30sp"
         android:layout_gravity="center"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:progress="0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dashboard_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="485dp"
+            android:layout_below="@+id/progressBar" />
+    </RelativeLayout>
+
 
 </LinearLayout>

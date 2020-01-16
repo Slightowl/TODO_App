@@ -41,7 +41,11 @@ public class TaskManagerFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.task_manager, container, false);
 
+
         TaskDatabaseHandler taskDatabaseHandler = new TaskDatabaseHandler(getActivity());
+
+        /* if database is populated byPass initial screen */
+        byPassActivity();
 
         /* test database */
         List<TaskList> taskLists = taskDatabaseHandler.getAllTaskList();
@@ -60,6 +64,21 @@ public class TaskManagerFragment extends Fragment {
         });
 
         return view;
+    }
+
+    /*
+    Checks to see if task database is populated
+    if populated get listActivity and go straight
+    to the list of tasks in database
+     */
+    private void byPassActivity() {
+        TaskDatabaseHandler taskDatabaseHandler = new TaskDatabaseHandler(getActivity());
+
+        if (taskDatabaseHandler.getCount() > 0) {
+
+            getActivity().startActivity(new Intent(getActivity(),com.example.todoapp.ListActivity.class));
+            getActivity().finish();
+        }
     }
 
     private void saveItem(View view) {
@@ -93,8 +112,8 @@ public class TaskManagerFragment extends Fragment {
         builder = new AlertDialog.Builder(getActivity());
         View view = getLayoutInflater().inflate(R.layout.task_manager_popup, null);
 
-        taskItem = view.findViewById(R.id.task_item);
-        taskDescription = view.findViewById(R.id.task_description);
+        taskItem = view.findViewById(R.id.task_manager_item);
+        taskDescription = view.findViewById(R.id.task_manager_description);
 
         /* save tasks into database through save button */
         saveButton = view.findViewById(R.id.save_button);

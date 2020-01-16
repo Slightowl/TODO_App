@@ -10,15 +10,18 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /*
+Samuel Lightowler - [--/--/20]
 
+Mobile application which allows a user to create
+account with persistent data. CRUD operations allow
+user to create, update and delete tasks.
+*/
 
- */
-
-// Todo: fix task title output
+// Todo: Refactor code, lots of optimisation
+// Todo: ListActivity back button has bug which can throw you off app (not crash)
 // Todo: fix home page
 
 public class MainActivity extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
